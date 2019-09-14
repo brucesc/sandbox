@@ -10,6 +10,8 @@ import { DateComponent } from './Materials/date/date.component';
 import { InputComponent } from './Materials/input/input.component';
 import { RadiobuttonComponent } from './Materials/radiobutton/radiobutton.component';
 import { SelectComponent } from './Materials/select/select.component';
+import { AppRoutingModule } from './Routing/app-routing.module';
+import { BlueprintResolver } from './Routing/Resolvers/blueprint-resolver';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { SelectComponent } from './Materials/select/select.component';
     SelectComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [BlueprintResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,20 @@
-<form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
-    <ng-container *ngFor="let field of fields;" dynamicField [field]="field" [group]="form">
-    </ng-container>
-</form>
+<div class="form">
+    <div style="text-align:center">
+        <h1>
+            Registration Form
+        </h1>
+    </div>
+
+    <!-- <dynamic-form [fields]="regConfig" (submit)="submit($event)" *ngIf="regConfig.length>0">
+    </dynamic-form> -->
+
+    <form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
+        <ng-container *ngFor="let field of fields;" dynamicField [field]="field" [group]="form">
+        </ng-container>
+    </form>
+
+    <!-- <div class="margin-top">
+        {{ form.value | json }}
+    </div> -->
+    
+</div>
